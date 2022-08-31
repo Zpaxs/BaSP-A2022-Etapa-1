@@ -12,18 +12,18 @@ It has different profile settings such as Employees, PM Eployees, Admins and Sup
 
 To run this project copy the repository in Github by clicking "Code"
 
-![Tutorial Github Repo](.\Semana-01\assets\readme.png)
+![Tutorial Github Repo](https://github.com/Zpaxs/BaSP-A2022-Etapa-1/blob/main/Semana-01/assets/README.png?raw=true)
 
 Then click the copy icon and proceed to clone it on Git as per usual
 
-![Tutorial Github Repo](.\Semana-01\assets\readmetuto.png)
+![Tutorial Github Repo](https://github.com/Zpaxs/BaSP-A2022-Etapa-1/blob/main/Semana-01/assets/READMETuto.png?raw=true)
 
 ## Functionalities:
 
-![Tutorial App](.\Semana-01\assets\Howtouse.png)
+![Tutorial App](https://github.com/Zpaxs/BaSP-A2022-Etapa-1/blob/main/Semana-01/assets/Howtouse.png?raw=true)
 An admin can manage the projects you are working on, see employees in it, edit or delete the project.
 
-![Tutorial App](.\Semana-01\assets\Howtouse2.png)
+![Tutorial App](https://github.com/Zpaxs/BaSP-A2022-Etapa-1/blob/main/Semana-01/assets/Howtouse2.png?raw=true)
 Employees can load worked hours detailing quantitity, project and task asociated.
 
 These are only a few of the funtionalities trackgenix offers you to make your and your teams work more time effective.

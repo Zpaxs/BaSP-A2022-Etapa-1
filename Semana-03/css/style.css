@@ -2,28 +2,123 @@ body {
   background-color: #ffffff;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-
 h1 {
+  width: 686px;
+  height: 110px;
+  padding-top: 24px;
+  margin-left: 476px;
+  margin-top: 86px;
+  border-radius: 15px;
   background-color: #ff0000;
   color: #ffffff;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 42px;
-  font-weight: bold;
+  font-weight: 700px;
   text-align: center;
-  padding-top: 24px;
-  width: 686px;
-  height: 110px;
-  margin-left: 476px;
-  margin-top: 86px;
-  border-radius: 15px;
 }
-
+#subtitle {
+  position: absolute;
+  width: 439px;
+  height: 25px;
+  top: 289px;
+  left: 593px;
+  font-style: italic;
+}
+#landing-img {
+  position: absolute;
+  width: 417px;
+  height: 339px;
+  top: 402px;
+  left: 486px;
+}
+#landing-content {
+  position: absolute;
+  width: 342px;
+  height: 124px;
+  left: 1031px;
+  top: 491px;
+  font-style: italic;
+}
 aside {
+  position: fixed;
+  width: 277px;
+  height: 983px;
   top: 0px;
+  left: 0px;
   background-color: #ff0000;
   color: #ffffff;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  width: 277px;
-  height: 983px;
+}
+#icon-home {
   position: fixed;
+  top: 94px;
+  left: 54px;
+}
+#home {
+  position: fixed;
+  left: 109px;
+  top: 94px;
+  font-size: 24px;
+  font-weight: 700px;
+  text-decoration-style: double;
+}
+#icon-sign-up {
+  position: fixed;
+  top: 366px;
+  left: 60px;
+}
+#sign-up {
+  position: fixed;
+  left: 110px;
+  top: 366px;
+  font-size: 20px;
+  font-weight: 700px;
+}
+#icon-log-in {
+  position: fixed;
+  top: 438px;
+  left: 60px;
+}
+#log-in {
+  position: fixed;
+  left: 106px;
+  top: 438px;
+  font-size: 20px;
+  font-weight: 700px;
+}
+#icon-contact {
+  position: fixed;
+  top: 827px;
+  left: 29px;
+}
+#contact {
+  position: fixed;
+  left: 73px;
+  top: 827px;
+  font-size: 20px;
+  font-weight: 400px;
+}
+#icon-phone {
+  position: fixed;
+  top: 879px;
+  left: 31px;
+}
+#phone {
+  position: fixed;
+  left: 72.14px;
+  top: 878px;
+  font-size: 16px;
+  font-weight: 400px;
+}
+#icon-mail {
+  position: fixed;
+  top: 917px;
+  left: 22px;
+}
+#mail {
+  position: fixed;
+  left: 110px;
+  top: 369px;
+  font-size: 16px;
+  font-weight: 400px;
 }

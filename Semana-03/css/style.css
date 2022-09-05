@@ -1,20 +1,30 @@
 body {
+  margin-left: 277px;
   background-color: #ffffff;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-h1 {
+div,
+section {
+  width: 1512px;
+  height: 982px;
+}
+.rectangulo-rojo {
+  position: absolute;
   width: 686px;
   height: 110px;
-  padding-top: 24px;
-  margin-left: 476px;
-  margin-top: 86px;
+  left: 476px;
+  top: 86px;
   border-radius: 15px;
   background-color: #ff0000;
+}
+h1 {
+  position: absolute;
+  left: 723px;
+  top: 110px;
   color: #ffffff;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 42px;
   font-weight: 700px;
-  text-align: center;
 }
 #subtitle {
   position: absolute;
@@ -117,8 +127,141 @@ aside {
 }
 #mail {
   position: fixed;
-  left: 110px;
-  top: 369px;
+  left: 60px;
+  top: 924px;
   font-size: 16px;
   font-weight: 400px;
+}
+.rectangulo-functionalities {
+  position: absolute;
+  width: 472px;
+  height: 72px;
+  left: 576px;
+  margin-top: 91px;
+  background-color: #ff0000;
+}
+.functionalities {
+  position: absolute;
+  left: 717px;
+  margin-top: 111px;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 28px;
+  color: #ffffff;
+}
+.rombo1 {
+  position: absolute;
+  left: 430.73px;
+  margin-top: 356.61px;
+  width: 98.2px;
+  height: 98.2px;
+  background: #ff0000;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-radius: 10px;
+}
+#icon-record-hours {
+  position: absolute;
+  left: 444.91px;
+  margin-top: 364.68px;
+}
+#record-hours {
+  position: absolute;
+  left: 579.15px;
+  margin-top: 336.76px;
+  font-family: "Roboto";
+  font-style: bold;
+  font-weight: 700px;
+  font-size: 32px;
+  color: #000000;
+}
+.rombo2 {
+  position: absolute;
+  left: 915.57px;
+  margin-top: 354.8px;
+  width: 98.2px;
+  height: 98.2px;
+  background: #ff0000;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-radius: 10px;
+}
+#icon-reports {
+  position: absolute;
+  left: 938.86px;
+  margin-top: 369.1px;
+}
+#reports {
+  position: absolute;
+  left: 1064px;
+  margin-top: 339.12px;
+  font-family: "Roboto";
+  font-style: bold;
+  font-weight: 700px;
+  font-size: 32px;
+  color: #000000;
+}
+.rombo3 {
+  position: absolute;
+  left: 431.63px;
+  margin-top: 639.98px;
+  width: 98.2px;
+  height: 98.2px;
+  background: #ff0000;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-radius: 10px;
+}
+#icon-resource-management {
+  position: absolute;
+  left: 453.9px;
+  margin-top: 657.88px;
+}
+#resource-management {
+  position: absolute;
+  left: 579.15px;
+  margin-top: 620.12px;
+  font-family: "Roboto";
+  font-style: bold;
+  font-weight: 700px;
+  font-size: 32px;
+  color: #000000;
+}
+.rombo4 {
+  position: absolute;
+  left: 915.57px;
+  margin-top: 639.98px;
+  width: 98.2px;
+  height: 98.2px;
+  background: #ff0000;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-radius: 10px;
+}
+#icon-multiple-roles {
+  position: absolute;
+  left: 938.75px;
+  margin-top: 657.88px;
+}
+#multiple-roles {
+  position: absolute;
+  left: 1064px;
+  margin-top: 620.12px;
+  font-family: "Roboto";
+  font-style: bold;
+  font-weight: 700px;
+  font-size: 32px;
+  color: #000000;
 }

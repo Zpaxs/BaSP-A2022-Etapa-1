@@ -50,7 +50,6 @@ h1 {
   top: 491px;
   font-style: italic;
 }
-/* Hasta aca el main */
 #icon-home {
   position: fixed;
   top: 94px;
@@ -134,7 +133,6 @@ aside {
   color: #ffffff;
   font-family: "Roboto";
 }
-/* Hasta aca la sidebar */
 .rectangulo-functionalities {
   position: absolute;
   width: 472px;
@@ -268,7 +266,6 @@ aside {
   font-size: 32px;
   color: #000000;
 }
-/* Hasta aca las functionalities */
 .why-using-trackgenix {
   position: relative;
   width: 472px;
@@ -379,10 +376,80 @@ aside {
   text-align: center;
   size: 15px;
 }
-/* Form */
+#information-request {
+  position: relative;
+  width: 737px;
+  height: 72px;
+  left: 161px;
+  top: 237px;
+  font-family: "Roboto";
+  font-weight: 700px;
+  font-size: 24px;
+  text-align: center;
+  background-color: #ff0000;
+  color: #ffffff;
+}
+form {
+  position: relative;
+  width: 737px;
+  height: 439px;
+  left: 161px;
+  top: 237px;
+  background-color: #e5e5e5;
+  font-size: 14px;
+}
+#table {
+  margin: auto;
+  margin-top: 41px;
+}
+.table-lable {
+  display: list-item;
+  font-family: "Roboto";
+  font-size: 22px;
+}
+#confirm {
+  width: 255px;
+  height: 40.64px;
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 14px;
+  background-color: #ff0000;
+  color: #ffffff;
+  border: 0px;
+  border-radius: 5px;
+}
+#history {
+  position: relative;
+  width: 430px;
+  height: 65.59px;
+  left: 362px;
+  top: 77.75px;
+  font-family: "Roboto";
+  font-weight: 700px;
+  font-size: 30px;
+  text-align: center;
+  background-color: #ff0000;
+  color: #ffffff;
+}
+.history {
+  position: relative;
+  left: 90px;
+  display: inline-block;
+  width: 20%;
+  height: 371px;
+  border-radius: 15px;
+  color: #ffffff;
+  background-color: #000000;
+  opacity: 50%;
+}
+.history-section {
+  background-image: url("./../assets/Rectangle\ 119.png");
+  background-repeat: no-repeat;
+  color: #80;
+}
+
 /* historia */
 /* Aca va la nav */
-/* Empieza el Footer */
 footer {
   background-color: #ff0000;
   text-align: center;

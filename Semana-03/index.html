@@ -74,37 +74,61 @@
       <img src="./assets/Icon Decision Making.png" alt="Icon arrows pointing opposite directions" id="icon-decision" />
       <p id="decision-making">Improve your decisión making by having access to this valuable information at any time.</p>
     </section>
-    <!-- HASTA ACA ESTA HECHO TODO -->
     <section>
-      <h2>Information Request</h2>
+      <h2 id="information-request">Information Request</h2>
       <form action="">
         <fieldset>
-          <label for="name">Name</label>
-          <input type="name" name="name" id="name" />
-          <label for="email">Email</label>
-          <input type="email" />
-          <label for="Contact area">Contact area</label>
-          <input type="radio" id="HR department" name="Contact-area" />
-          <label for="HR department">HR department</label>
-          <input type="radio" id="Systems" name="Contact-area" />
-          <label for="Systems">Systems</label>
-          <input type="radio" id="Commercialization" name="Contact-area" />
-          <label for="Commercialization">Commercialization</label>
-          <label for="Message">Message</label>
-          <textarea name="Message" id="Message" cols="30" rows="10"></textarea>
-          <button>Confirm</button>
+          <table id="table">
+            <tbody>
+              <tr>
+                <td><label class="table-lable" for="name">Name</label></td>
+                <td><input type="name" name="name" id="name" /></td>
+              </tr>
+              <tr>
+                <td><label class="table-lable" for="email">Email</label></td>
+                <td><input type="email" name="email" id="email" /></td>
+              </tr>
+              <tr>
+                <td><label class="table-lable" for="Contact area">Contact area</label></td>
+                <td>
+                  <article style="display: block;">
+                    <input type="radio" id="HR department" name="Contact-area" />
+                    <label for="HR department">HR department</label>
+                  </article>
+                  <article style="display: block;">
+                    <input type="radio" id="Systems" name="Contact-area" />
+                    <label for="Systems">Systems</label>
+                  </article>
+                  <article style="display: block;">
+                    <input type="radio" id="Commercialization" name="Contact-area" />
+                    <label for="Commercialization">Commercialization</label>
+                  </article>
+                </td>
+              </tr>
+              <tr>
+                <td><label class="table-lable" for="Message">Message</label></td>
+                <td><textarea name="Message" id="Message" cols="30" rows="10"></textarea></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <button id="confirm">Confirm</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </fieldset>
       </form>
     </section>
-    <section>
-      <h2>
+    <section class="history-section">
+      <h2 id="history">
         History
       </h2>
-      <article>
+      <article class="history">
         <h3>2007</h3>
         <p>We initially began to sell our services in 2007 at the department of Rosario, Argentina.</p>
       </article>
-      <article>
+      <article class="history">
         <h3>2011</h3>
         <p>
           Since day 1 of our introduction to the market, our model has been to put our clients needs first and to ensure a high level of client
@@ -112,14 +136,14 @@
           country.
         </p>
       </article>
-      <article>
+      <article class="history">
         <h3>2014</h3>
         <p>
           In Radium Rocket we are constanly pushing the boundaries of whats posible.In the year 2014, we acquired Microsoft Data, Inc., which allowed
           us to become the worldwide leading developer and provider of technology solutions in the casino industry.
         </p>
       </article>
-      <article>
+      <article class="history">
         <h3>2018</h3>
         <p>
           In 2018, we opened a software development center in Hong Kong, Asia, to supplement our product development efforts.Since then, engineers,
@@ -127,14 +151,14 @@
           technologies that have singinifcant potential for enterprises with bright and new business ideas.
         </p>
       </article>
-      <article>
+      <article class="history">
         <h3>2021</h3>
         <p>
           In 2021, we sold our IT solutions department in regards to the casino industry, and restructured our business model to focus on a more
           ethical approach to business.
         </p>
       </article>
-      <article>
+      <article class="history">
         <h3>2022</h3>
         <p>
           Today, we are focused on providing state-of-the-art, end-to-end solutions that enhance users experiences and allow our customers to promote

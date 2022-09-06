@@ -62,7 +62,7 @@ h1 {
   top: 94px;
   font-size: 24px;
   font-weight: 700px;
-  text-decoration-style: double;
+  text-decoration: underline double;
 }
 #icon-sign-up {
   position: fixed;
@@ -268,6 +268,7 @@ aside {
   font-size: 32px;
   color: #000000;
 }
+/* Hasta aca las functionalities */
 .why-using-trackgenix {
   position: relative;
   width: 472px;
@@ -308,19 +309,85 @@ aside {
   height: 72.3px;
   left: 152.32px;
   top: 120.66px;
+  text-align: center;
 }
-
 .work-traceability {
   position: relative;
-  left: 879.67px;
-  top: 357.92px;
+  left: 874.67px;
+  top: 5.92px;
   font-family: "Roboto";
   font-weight: 700;
   font-size: 24px;
 }
-
 #icon-work-traceability {
+  position: relative;
+  left: 751.87px;
+  top: 10.99px;
+  width: 70.2px;
+  height: 82.23px;
 }
-
 #work-traceability {
+  position: relative;
+  width: 284.89px;
+  height: 63.62px;
+  left: 825.95px;
+  text-align: center;
+}
+.leadership {
+  position: relative;
+  left: 189.3px;
+  top: 225.57px;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 24px;
+}
+#icon-leadership {
+  position: relative;
+  left: 84.75px;
+  top: 220.75px;
+  width: 75.78px;
+  height: 57.36px;
+}
+#leadership {
+  position: relative;
+  top: 175.21px;
+  left: 174.95px;
+  width: 383.68px;
+  height: 84.83px;
+  text-align: center;
+}
+.decision-making {
+  position: relative;
+  left: 874px;
+  top: 58px;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 24px;
+}
+#icon-decision {
+  position: relative;
+  width: 65.49px;
+  height: 80.28px;
+  left: 755.72px;
+  top: 50px;
+}
+#decision-making {
+  position: relative;
+  width: 449.87px;
+  height: 80.01px;
+  left: 830.13px;
+  text-align: center;
+  size: 15px;
+}
+/* Form */
+/* historia */
+/* Aca va la nav */
+/* Empieza el Footer */
+footer {
+  background-color: #ff0000;
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 28px;
+  color: white;
+  padding-top: 20px;
 }

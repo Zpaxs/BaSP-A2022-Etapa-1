@@ -423,7 +423,6 @@ form {
   width: 430px;
   height: 65.59px;
   left: 362px;
-  top: 77.75px;
   font-family: "Roboto";
   font-weight: 700px;
   font-size: 30px;
@@ -431,25 +430,31 @@ form {
   background-color: #ff0000;
   color: #ffffff;
 }
-.history {
+.history > p {
   position: relative;
   left: 90px;
-  display: inline-block;
-  width: 20%;
+  width: 377px;
   height: 371px;
   border-radius: 15px;
   color: #ffffff;
-  background-color: #000000;
-  opacity: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+  text-align: center;
+}
+.history > h3 {
+  position: relative;
+  font-family: "Rokkitt";
+  font-size: 36px;
 }
 .history-section {
   background-image: url("./../assets/Rectangle\ 119.png");
   background-repeat: no-repeat;
-  color: #80;
 }
-
-/* historia */
-/* Aca va la nav */
+.history {
+  width: 25%;
+  height: 350px;
+  display: inline-table;
+}
 footer {
   background-color: #ff0000;
   text-align: center;

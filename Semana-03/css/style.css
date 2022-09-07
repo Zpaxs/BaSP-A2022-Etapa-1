@@ -1,11 +1,10 @@
 body {
+  width: 1512px;
+  height: 982px;
   margin-left: 277px;
   background-color: #ffffff;
   font-family: "Roboto";
-  width: 100%;
-  overflow-x: hidden;
 }
-div,
 section {
   height: 982px;
 }
@@ -19,6 +18,7 @@ section {
   background-color: #ff0000;
 }
 h1 {
+  display: inline;
   position: relative;
   left: 451px;
   top: 4px;
@@ -126,7 +126,7 @@ h1 {
 aside {
   position: fixed;
   width: 277px;
-  height: 983px;
+  height: 100%;
   top: 0px;
   left: 0px;
   background-color: #ff0000;
@@ -390,6 +390,7 @@ aside {
   color: #ffffff;
 }
 form {
+  display: inline-block;
   position: relative;
   width: 737px;
   height: 439px;
@@ -432,7 +433,6 @@ form {
 }
 .history > p {
   position: relative;
-  left: 90px;
   width: 377px;
   height: 371px;
   border-radius: 15px;
@@ -454,6 +454,34 @@ form {
   width: 25%;
   height: 350px;
   display: inline-table;
+}
+nav {
+  margin-left: 129px;
+  margin-bottom: 200px;
+}
+.title-nav {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 35px;
+  color: #ff0000;
+  text-transform: uppercase;
+}
+ul {
+  display: inline-block;
+  width: 90%;
+}
+a {
+  font-size: 14px;
+  color: #747474;
+}
+nav > article {
+  display: inline-table;
+  width: 25%;
+  height: 226px;
+}
+footer > img {
+  margin-left: 150px;
 }
 footer {
   background-color: #ff0000;

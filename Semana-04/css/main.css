@@ -1,0 +1,61 @@
+main > .titles {
+  font-size: 20px;
+  padding: 4% 0;
+  margin-top: 25%;
+}
+main > section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.functionalities > div {
+  display: flex;
+  align-items: center;
+}
+.functionalities > div > p {
+  font-size: 22px;
+  font-weight: 600;
+}
+.rombo {
+  width: 65px;
+  height: 65px;
+  margin: 10% 5%;
+  background: #ff0000;
+  transform: rotate(45deg);
+  border-radius: 10px;
+}
+.rombo > img {
+  width: 35px;
+  height: 40px;
+  transform: rotate(-45deg);
+}
+
+.utility {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10%;
+}
+.utility > div {
+  margin-right: 5%;
+}
+
+.utility > div > h3 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.utility > div > p {
+  font-size: 12px;
+  font-weight: 500;
+  color: #696969;
+}
+
+.utility > img {
+  max-width: 15%;
+  margin: 5%;
+}
+
+aside {
+  display: none;
+}

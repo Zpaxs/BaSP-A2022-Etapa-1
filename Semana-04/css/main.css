@@ -1,20 +1,12 @@
-main > .titles {
-  font-size: 20px;
-  padding: 4% 0;
-  margin-top: 25%;
-}
 main > section {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  margin-bottom: 10%;
 }
 .functionalities > div {
   display: flex;
   align-items: center;
-}
-.functionalities > div > p {
-  font-size: 22px;
-  font-weight: 600;
 }
 .rombo {
   width: 65px;
@@ -25,37 +17,134 @@ main > section {
   border-radius: 10px;
 }
 .rombo > img {
+  margin-top: 20%;
+  margin-left: 30%;
   width: 35px;
   height: 40px;
   transform: rotate(-45deg);
 }
-
 .utility {
   display: flex;
-  justify-content: center;
   align-items: center;
   margin-bottom: 10%;
-}
-.utility > div {
   margin-right: 5%;
 }
-
-.utility > div > h3 {
-  font-size: 22px;
-  font-weight: 500;
-}
-
 .utility > div > p {
   font-size: 12px;
   font-weight: 500;
   color: #696969;
 }
-
+.utility > div {
+  margin-right: 5%;
+}
 .utility > img {
   max-width: 15%;
   margin: 5%;
 }
+form {
+  display: flex;
+  justify-content: center;
+  height: 80%;
+  margin: 5%;
+  background-color: #e5e5e5;
+  font-size: 14px;
+}
+.table {
+  margin-top: 41px;
+}
+tbody {
+  display: flex;
+  flex-direction: column;
+}
+tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 18px;
+  font-weight: 700;
+}
+td {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+td > div > label {
+  font-size: 14px;
+}
 
-aside {
-  display: none;
+textarea {
+  width: 200px;
+}
+#confirm {
+  width: 200px;
+  height: 40.64px;
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 14px;
+  background-color: #ff0000;
+  color: #ffffff;
+  border: 0px;
+  border-radius: 5px;
+}
+.history-section {
+  text-align: center;
+  background-color: #ff0000;
+  color: #ffffff;
+  background-image: url("./../assets/Rectangle\ 120.png");
+  background-repeat: no-repeat;
+}
+.history-rows {
+  display: flex;
+  justify-content: space-around;
+}
+.history {
+  display: flex;
+  margin-bottom: 5%;
+  width: 32%;
+}
+.history > p {
+  border-radius: 15px;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 10px;
+  text-align: center;
+}
+.years {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5%;
+  font-family: "rokkit";
+  color: black;
+  font-size: 14px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+nav > div {
+  margin: 10%;
+}
+
+.title-nav {
+  display: flex;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 35px;
+  color: #ff0000;
+  text-transform: uppercase;
+}
+nav > div > ul > li > a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #747474;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  main {
+    margin-left: 20%;
+  }
 }

@@ -97,7 +97,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 ​ ol,
 ul {
-  list-style: none;
+  list-style: disc;
 }
 ​ blockquote,
 q {

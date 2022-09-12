@@ -71,7 +71,6 @@ td {
 td > div > label {
   font-size: 14px;
 }
-
 textarea {
   width: 200px;
 }
@@ -88,9 +87,9 @@ textarea {
 }
 .history-section {
   text-align: center;
-  background-color: #ff0000;
+  background-color: #9f5c62;
   color: #ffffff;
-  background-image: url("./../assets/Rectangle\ 120.png");
+  background-image: url("./../assets/Rectangle\ 119.png");
   background-repeat: no-repeat;
 }
 .history-rows {
@@ -117,7 +116,21 @@ textarea {
   color: black;
   font-size: 14px;
 }
-
+.contact {
+  text-align: center;
+  margin: 80% 5%;
+  background-color: #ff5454;
+}
+.contact > div {
+  padding: 10%;
+}
+.contact > div > p {
+  padding: 5%;
+}
+.contact > div > h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
 nav {
   display: flex;
   flex-direction: column;
@@ -126,7 +139,6 @@ nav {
 nav > div {
   margin: 10%;
 }
-
 .title-nav {
   display: flex;
   font-style: normal;
@@ -142,9 +154,56 @@ nav > div > ul > li > a {
   color: #747474;
   text-decoration: none;
 }
-
+@media (min-width: 481px) and (max-width: 768px) {
+  .functionalities {
+    margin-left: 20%;
+  }
+  .bold,
+  .contact > div > h2 {
+    font-size: 32px;
+    font-weight: 500;
+  }
+  .utility > div > p,
+  nav > div > ul > li > a {
+    font-size: 20px;
+    font-weight: 500;
+    color: #696969;
+  }
+  .utility > div {
+    margin-right: 0%;
+  }
+  form {
+    margin: 5% 15%;
+    padding-bottom: 15%;
+  }
+  tr {
+    font-weight: 700;
+  }
+  textarea {
+    margin-bottom: 10%;
+  }
+  #confirm,
+  .years,
+  tr,
+  form {
+    font-size: 24px;
+  }
+  .history > p {
+    font-size: 16px;
+  }
+  .contact {
+    margin: 50% 15%;
+    font-size: 26px;
+  }
+  .title-nav {
+    font-size: 36px;
+  }
+}
 @media (min-width: 768px) {
   main {
     margin-left: 20%;
+  }
+  .contact {
+    display: none;
   }
 }

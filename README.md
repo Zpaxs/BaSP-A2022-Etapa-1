@@ -8,6 +8,20 @@ With Trakgenix you can create and organize work projects keeping track of tasks 
 
 It has different profile settings such as Employees, PM Eployees, Admins and SuperAdmins to provide more or less responsability depending on the user.
 
+###This project is still under construction.
+
+###Week-01:
+The first week I created a screenflow for the app using Figma, where all the screens for the app were created.
+
+###Week-02:
+The second week I made an HTML document that had the content of the landing page for the Trackgenix app using the desktop version.
+
+###Week-03:
+The third week I added the corresponding styles to the HTML structure with css.
+
+###Week-04:
+The current week I'm working on making the landing page responsive using flexbox and media queries.
+
 ## Setup
 
 To run this project copy the repository in Github by clicking "Code"
@@ -32,4 +46,4 @@ These are only a few of the funtionalities trackgenix offers you to make your an
 
 👨‍💻Soledad Acosta. All of my projects are available at: https://github.com/Zpaxs/
 
-Technologies used: html
+Technologies used: html, css.

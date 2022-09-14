@@ -256,4 +256,7 @@ nav > div > ul > li > a {
   .functionalities {
     flex-wrap: nowrap;
   }
+  .container {
+    flex-direction: column;
+  }
 }

@@ -1,5 +1,6 @@
 .functionalities > div {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 .rombo {
@@ -20,6 +21,7 @@
 }
 .utility {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 10%;
   margin-right: 5%;
@@ -48,7 +50,8 @@ form {
   font-size: 14px;
 }
 form > .titles {
-  display: none;
+  margin: 0%;
+  width: 96%;
 }
 .table {
   margin-top: 41px;
@@ -157,6 +160,12 @@ nav > div > ul > li > a {
   color: #747474;
   text-decoration: none;
 }
+@media (max-width: 768px) {
+  form > .titles {
+    display: none;
+  }
+}
+
 @media (min-width: 481px) and (max-width: 768px) {
   .functionalities {
     margin-left: 20%;
@@ -230,11 +239,6 @@ nav > div > ul > li > a {
   nav > div {
     margin: 10% 0% 10% 0%;
   }
-
-  form > .titles {
-    margin: 0%;
-    width: 96%;
-  }
   .titles2 {
     display: none;
   }
@@ -247,5 +251,9 @@ nav > div > ul > li > a {
   }
   .years {
     font-size: 34px;
+  }
+  .utility,
+  .functionalities {
+    flex-wrap: nowrap;
   }
 }

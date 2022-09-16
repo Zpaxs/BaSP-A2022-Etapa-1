@@ -12,19 +12,23 @@ It has different profile settings such as Employees, PM Eployees, Admins and Sup
 
 ### Week-01:
 
-The first week I created a screenflow for the app using Figma, where all the screens for the app were created.
+I created a screenflow for the app using Figma, where all the screens for the app were created.
 
 ### Week-02:
 
-The second week I made an HTML document that had the content of the landing page for the Trackgenix app using the desktop version.
+I made an HTML document that had the content of the landing page for the Trackgenix app using the desktop version.
 
 ### Week-03:
 
-The third week I added the corresponding styles to the HTML structure with css.
+I added the corresponding styles to the HTML structure with css.
 
 ### Week-04:
 
-The current week I'm working on making the landing page responsive using flexbox and media queries.
+I worked on making the landing page responsive using flexbox and media queries.
+
+### Week-05:
+
+Im currently working on exercises of javascript to practice what i've learned.
 
 ## Setup
 

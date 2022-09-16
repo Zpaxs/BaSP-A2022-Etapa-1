@@ -6,7 +6,7 @@ console.log("-Exercise 1.a:");
 var cats = 2;
 var dogs = 1;
 var myPets = cats + dogs;
-console.log("My pets: " + myPets);
+console.log("I have: " + myPets + " pets.");
 
 /* b. Crear dos variables de tipo String y concatenarlas guardando el resultado en una 3er variable.*/
 console.log("-Exercise 1.b:");

@@ -4,8 +4,8 @@ console.log("-Exercise 3.a:");
 var monthsSpanish = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 console.log("Month 5 in spanish is: " + monthsSpanish[4] + " and the month number 11 is: " + monthsSpanish[10]);
 
-/*b. Ordenar el array de meses alfabéticamente y mostrarlo por consola (utilizar sort).
-console.log("-Exercise 3.b:");*/
+/*b. Ordenar el array de meses alfabéticamente y mostrarlo por consola (utilizar sort).*/
+console.log("-Exercise 3.b:");
 console.log("Monts in spanish ordered alfabetically are: " + monthsSpanish.sort());
 
 /*c. Agregar un elemento al principio y al final del array (utilizar unshift y push).*/

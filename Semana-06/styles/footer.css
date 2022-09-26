@@ -3,6 +3,8 @@ footer > img {
   margin: 0 5% 0 5%;
 }
 footer {
+  width: 100%;
+  bottom: 0;
   background-color: #ff0000;
   text-align: center;
   font-family: "Roboto";
@@ -14,6 +16,7 @@ footer {
   footer {
     font-size: 24px;
     font-weight: 500;
+    width: 100%;
   }
   footer > img {
     max-width: none;
@@ -25,6 +28,7 @@ footer {
     margin-left: 18%;
     font-size: 26px;
     padding-top: 4%;
+    width: 82%;
   }
   footer > img {
     margin: 0 5% 0 5%;

@@ -5,12 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/reset.css" />
-    <link rel="stylesheet" href="../styles/login.css" />
+    <link rel="stylesheet" href="../styles/sign-up.css" />
     <link rel="stylesheet" href="../styles/sidebar.css" />
-    <link rel="stylesheet" href="../styles/header.css">
-    <link rel="stylesheet" href="../styles/footer.css">
-    <script src="../javascript/login.js"></script>
-    <title>Trackgenix - Log In</title>
+    <script src="../javascript/sign-up.js"></script>
+    <title>Trackgenix - Sign up</title>
   </head>
   <body>
     <div class="aside-mobile">
@@ -22,8 +20,8 @@
           <a href="./index.html"><img src="../assets/Icon Home.png" alt="Icon home" id="icon-home" />Home</a>
         </div>
         <div class="content-ad">
-          <a href="./sign-up.html"><img src="../assets/user-question.svg" alt="Icon person with question mark" id="icon-sign-up" /> Sign Up</a>
-          <a><img src="../assets/Icon Login.png" alt="Icon person" id="icon-log-in" /> Log In</a>
+          <a><img src="../assets/user-question.svg" alt="Icon person with question mark" id="icon-sign-up" /> Sign Up</a>
+          <a href="./login.html"><img src="../assets/Icon Login.png" alt="Icon person" id="icon-log-in" /> Log In</a>
         </div>
         <div class="secondary-content-ad">
           <a><img src="../assets/Icon Contact.png" alt="Icon clock" id="icon-contact" />Contact</a>
@@ -35,33 +33,26 @@
     <header>
       <h1 class="login-title">Trackgenix</h1>
     </header>
-    <main>
     <fieldset>
-      <form action="" class="form-login">
+      <form action="">
         <table class="table">
           <tbody>
             <th>
                 <td class="form-title">Log in</td>
             </th>
             <tr>
-              <td>
-                <input type="text" class=form-input name="email" id="email-input" />
-                <p id="email-error"> </p>
-              </td>
+              <td><input type="text" name="email" id="email" /></td>
             </tr>
             <tr>
-              <td>
-                <input type="password" class =form-input name="password" id="password-input" />
-                <p id="password-error"> </p>
-              </td>
+              <td><input type="text" name="password" id="password" /></td>
             </tr>
             <tr>
-              <td><input type="checkbox" name="remember-me" /></td>
+              <td><input type="checkbox" name="rememberme" /></td>
               <td>Remember me</td>
             </tr>
             <tr>
               <td>
-                <a href="./sign-up.html">Register here</a>
+                <a href="">Register here</a>
               </td>
               <td>
                 <a href="">Forgot your password?</a>
@@ -69,19 +60,12 @@
             </tr>
             <tr>
               <td>
-                <button id="form-login-button">Login</button>
+                <button id="login">Login</button>
               </td>
             </tr>
           </tbody>
         </table>
       </form>
     </fieldset>
-      </main>
-    <footer>
-      <img src="../assets/Icon Facebook.png" alt="Facebook Icon" /> <img src="../assets/Icon twitter.png" alt="Twitter Icon" />
-      <img src="../assets/Icon Linkedin.png" alt="Linkedin-icon" /> <img src="../assets/Icon Instagram.png" alt="instagram-icon" />
-      <p>Rosario, Argentina.</p>
-      <p>Copyright &copy; 2022 Radium Rocket. All rights reserved</p>
-    </footer>
   </body>
 </html>

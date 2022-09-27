@@ -1,7 +1,7 @@
 window.onload = function () {
   var nameInput = document.getElementById("name");
   var lastNameInput = document.getElementById("last-name");
-  var documentInput = document.getElementById("document");
+  var documentInput = document.getElementById("document-input");
   var dateOfBirthInput = document.getElementById("date-of-birth");
   var phoneInput = document.getElementById("phone");
   var addressInput = document.getElementById("address");
@@ -53,7 +53,7 @@ window.onload = function () {
     cleanField("last-name-error", "last-name");
   });
   documentInput.addEventListener("focus", function () {
-    cleanField("document-error", "document");
+    cleanField("document-error", "document-input");
   });
   dateOfBirthInput.addEventListener("focus", function () {
     cleanField("date-of-birth-error", "date-of-birth");
@@ -106,7 +106,7 @@ function alertMsg() {
   var lastNameError = document.getElementById("last-name-error").innerText;
   var lastNameValue = document.getElementById("last-name").value;
   var documentError = document.getElementById("document-error").innerText;
-  var documentValue = document.getElementById("document").value;
+  var documentValue = document.getElementById("document-input").value;
   var dateOfBirthError = document.getElementById("date-of-birth-error").innerText;
   var dateOfBirthValue = document.getElementById("date-of-birth").value;
   var phoneError = document.getElementById("phone-error").innerText;
@@ -125,67 +125,67 @@ function alertMsg() {
   var repeatPasswordValue = document.getElementById("repeat-password").value;
 
   if (nameError.length !== 1) {
-    msg += "The field Name cant be empty.\n";
+    msg += nameError + "\n";
   } else {
     msg += "Name: " + nameValue + "\n";
   }
 
   if (lastNameError.length !== 1) {
-    msg += "The field Last name cant be empty.\n";
+    msg += lastNameError + "\n";
   } else {
     msg += "Last name: " + lastNameValue + "\n";
   }
 
   if (documentError.length !== 1) {
-    msg += "The field Document cant be empty.\n";
+    msg += documentError + "\n";
   } else {
     msg += "Document: " + documentValue + "\n";
   }
 
   if (dateOfBirthError.length !== 1) {
-    msg += "The field Date of birth cant be empty.\n";
+    msg += dateOfBirthError + "\n";
   } else {
     msg += "Date of birth: " + dateOfBirthValue + "\n";
   }
 
   if (phoneError.length !== 1) {
-    msg += "The field Phone cant be empty.\n";
+    msg += phoneError + "\n";
   } else {
     msg += "Phone: " + phoneValue + "\n";
   }
 
   if (addressError.length !== 1) {
-    msg += "The field Address cant be empty.\n";
+    msg += addressError + "\n";
   } else {
     msg += "Address: " + addressValue + "\n";
   }
 
   if (locationError.length !== 1) {
-    msg += "The field Location cant be empty.\n";
+    msg += locationError + "\n";
   } else {
     msg += "Location: " + locationValue + "\n";
   }
 
   if (postalCodeError.length !== 1) {
-    msg += "The field Postal code cant be empty.\n";
+    msg += postalCodeError + "\n";
   } else {
     msg += "Postal code: " + postalCodeValue + "\n";
   }
 
   if (emailError.length !== 1) {
-    msg += "The field Email cant be empty.\n";
+    msg += emailError + "\n";
   } else {
     msg += "Email: " + emailValue + "\n";
   }
 
   if (passwordError.length !== 1) {
-    msg += "The field Password cant be empty.\n";
+    msg += passwordError + "\n";
   } else {
     msg += "Password: " + passwordValue + "\n";
   }
 
   if (repeatPasswordError.length !== 1) {
-    msg += "The field Repeat password cant be empty.\n";
+    msg += repeatPasswordError + "\n";
   } else {
     msg += "Repeat password: " + repeatPasswordValue + "\n";
   }
@@ -198,7 +198,16 @@ function validateName() {
   var errorId = "name-error";
 
   if (name.length === 0) {
-    showErrorMsg("The name is required", errorId);
+    showErrorMsg("Name is required", errorId);
+    document.getElementById("name").classList.add("red-background");
+  } else if (name.length < 3) {
+    showErrorMsg("Name needs to be at least 3 characters length.", errorId);
+    document.getElementById("name").classList.add("red-background");
+  } else if (!isNaN(name)) {
+    showErrorMsg("Enter letters only", errorId);
+    document.getElementById("name").classList.add("red-background");
+  } else {
+    document.getElementById("name").classList.add("green-background");
   }
 }
 
@@ -207,16 +216,34 @@ function validateLastName() {
   var errorId = "last-name-error";
 
   if (lastName.length === 0) {
-    showErrorMsg("The last name is required", errorId);
+    showErrorMsg("Last name is required", errorId);
+    document.getElementById("last-name").classList.add("red-background");
+  } else if (lastName.length < 3) {
+    showErrorMsg("Last name needs to be at least 3 characters length.", errorId);
+    document.getElementById("name").classList.add("red-background");
+  } else if (!isNaN(lastName)) {
+    showErrorMsg("Enter letters only", errorId);
+    document.getElementById("last-name").classList.add("red-background");
+  } else {
+    document.getElementById("last-name").classList.add("green-background");
   }
 }
 
 function validateDocument() {
-  var documentValue = document.getElementById("document").value;
+  var documentValue = document.getElementById("document-input").value;
   var errorId = "document-error";
 
   if (documentValue.length === 0) {
-    showErrorMsg("The document is required", errorId);
+    showErrorMsg("Document is required", errorId);
+    document.getElementById("document-input").classList.add("red-background");
+  } else if (isNaN(documentValue)) {
+    showErrorMsg("Enter numeric value only", errorId);
+    document.getElementById("document-input").classList.add("red-background");
+  } else if (documentValue.length < 7) {
+    showErrorMsg("Document needs to be at least 7 characters length.", errorId);
+    document.getElementById("document-input").classList.add("red-background");
+  } else {
+    document.getElementById("document-input").classList.add("green-background");
   }
 }
 
@@ -226,6 +253,9 @@ function validateDateOfBirth() {
 
   if (dateOfBirth.length === 0) {
     showErrorMsg("The date of birth is required", errorId);
+    document.getElementById("date-of-birth").classList.add("red-background");
+  } else {
+    document.getElementById("date-of-birth").classList.add("green-background");
   }
 }
 
@@ -234,7 +264,17 @@ function validatePhone() {
   var errorId = "phone-error";
 
   if (phone.length === 0) {
-    showErrorMsg("The phone is required", errorId);
+    showErrorMsg("Phone is required", errorId);
+    document.getElementById("phone").classList.add("red-background");
+  }
+  if (isNaN(phone)) {
+    showErrorMsg("Enter numeric value only", errorId);
+    document.getElementById("phone").classList.add("red-background");
+  } else if (phone.length !== 10) {
+    showErrorMsg("Phone needs to be 10 characters length.", errorId);
+    document.getElementById("phone").classList.add("red-background");
+  } else {
+    document.getElementById("phone").classList.add("green-background");
   }
 }
 
@@ -243,7 +283,13 @@ function validateAddress() {
   var errorId = "address-error";
 
   if (address.length === 0) {
-    showErrorMsg("The address is required", errorId);
+    showErrorMsg("Address is required", errorId);
+    document.getElementById("address").classList.add("red-background");
+  } else if (address.length < 5) {
+    showErrorMsg("Address needs to be at least 5 characters length.", errorId);
+    document.getElementById("address").classList.add("red-background");
+  } else {
+    document.getElementById("address").classList.add("green-background");
   }
 }
 
@@ -252,7 +298,13 @@ function validateLocation() {
   var errorId = "location-error";
 
   if (location.length === 0) {
-    showErrorMsg("The location is required", errorId);
+    showErrorMsg("Location is required", errorId);
+    document.getElementById("location").classList.add("red-background");
+  } else if (location.length < 3) {
+    showErrorMsg("Location needs to be at least 3 characters length.", errorId);
+    document.getElementById("location").classList.add("red-background");
+  } else {
+    document.getElementById("location").classList.add("green-background");
   }
 }
 
@@ -262,6 +314,16 @@ function validatePostalCode() {
 
   if (postalCode.length === 0) {
     showErrorMsg("The postal code is required", errorId);
+    document.getElementById("postal-code").classList.add("red-background");
+  }
+  if (isNaN(postalCode)) {
+    showErrorMsg("Enter numeric value only", errorId);
+    document.getElementById("postal-code").classList.add("red-background");
+  } else if (postalCode.length < 4 || postalCode.length > 5) {
+    showErrorMsg("Postal code needs to be 4 or 5 characters length.", errorId);
+    document.getElementById("postal-code").classList.add("red-background");
+  } else {
+    document.getElementById("postal-code").classList.add("green-background");
   }
 }
 
@@ -270,7 +332,13 @@ function validateEmail() {
   var errorId = "email-error";
 
   if (email.length === 0) {
-    showErrorMsg("The email is required", errorId);
+    showErrorMsg("Email is required.", errorId);
+    document.getElementById("email").classList.add("red-background");
+  } else if (!validEmail(email)) {
+    showErrorMsg("Please enter a valid e-mail address.", errorId);
+    document.getElementById("email").classList.add("red-background");
+  } else {
+    document.getElementById("email").classList.add("green-background");
   }
 }
 
@@ -279,16 +347,30 @@ function validatePassword() {
   var errorId = "password-error";
 
   if (password.length === 0) {
-    showErrorMsg("The password is required", errorId);
+    showErrorMsg("Password is required", errorId);
+    document.getElementById("password").classList.add("red-background");
+  } else if (password.length < 8) {
+    showErrorMsg("Password needs to be at least 8 characters length.", errorId);
+    document.getElementById("password").classList.add("red-background");
+  } else {
+    document.getElementById("password").classList.add("green-background");
   }
 }
 
 function validateRepeatPassword() {
   var repeatPassword = document.getElementById("repeat-password").value;
+  var password = document.getElementById("password").value;
   var errorId = "repeat-password-error";
 
   if (repeatPassword.length === 0) {
-    showErrorMsg("The repeat password is required", errorId);
+    showErrorMsg("Repeat password is required", errorId);
+    document.getElementById("repeat-password").classList.add("red-background");
+  } else if (repeatPassword !== password) {
+    showErrorMsg("Repeat password must be the same as password.", errorId);
+    document.getElementById("repeat-password").classList.add("red-background");
+  } else if (repeatPassword === password) {
+    document.getElementById("repeat-password").classList.add("green-background");
+    document.getElementById("repeat-password-error").innerText = " ";
   }
 }
 

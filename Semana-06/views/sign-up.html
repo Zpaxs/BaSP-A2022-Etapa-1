@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="../styles/reset.css" />
     <link rel="stylesheet" href="../styles/sign-up.css" />
     <link rel="stylesheet" href="../styles/sidebar.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
     <script src="../javascript/sign-up.js"></script>
     <title>Trackgenix - Sign up</title>
   </head>
   <body>
-    <div class="aside-mobile">
+    <!-- <div class="aside-mobile">
       <a><img src="../assets/shape.png" alt="burger menu" /></a>
     </div>
     <aside>
@@ -29,42 +30,86 @@
           <p><img src="../assets/Icon email.png" alt="Icon email" id="icon-mail" />trackenixsup@rr.com</p>
         </div>
       </div>
-    </aside>
+    </aside> -->
     <header>
-      <h1 class="login-title">Trackgenix</h1>
+      <h1 class="sign-up-title">Trackgenix</h1>
     </header>
     <fieldset>
       <form action="">
-        <table class="table">
-          <tbody>
-            <th>
-                <td class="form-title">Log in</td>
-            </th>
-            <tr>
-              <td><input type="text" name="email" id="email" /></td>
-            </tr>
-            <tr>
-              <td><input type="text" name="password" id="password" /></td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" name="rememberme" /></td>
-              <td>Remember me</td>
-            </tr>
-            <tr>
-              <td>
-                <a href="">Register here</a>
-              </td>
-              <td>
-                <a href="">Forgot your password?</a>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <button id="login">Login</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="row-form">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" />
+            <p id="name-error">&nbsp;</p>
+          </div>
+          <div>
+            <label for="last-name">Last name</label>
+            <input type="text" id="last-name" />
+            <p id="last-name-error">&nbsp;</p>
+          </div>
+        </div>
+
+        <div class="row-form">
+          <div>
+            <label for="document">Document</label>
+            <input type="text" id="document" />
+            <p id="document-error">&nbsp;</p>
+          </div>
+          <div>
+            <label for="date-of-birth">Date of birth</label>
+            <input type="date" id="date-of-birth" />
+            <p id="date-of-birth-error">&nbsp;</p>
+          </div>
+        </div>
+
+        <div class="row-form">
+          <div>
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" />
+            <p id="phone-error">&nbsp;</p>
+          </div>
+          <div>
+            <label for="address">Address</label>
+            <input type="text" id="address" />
+            <p id="address-error">&nbsp;</p>
+          </div>
+        </div>
+
+        <div class="row-form">
+          <div>
+            <label for="location">Location</label>
+            <input type="text" id="location" />
+            <p id="location-error">&nbsp;</p>
+          </div>
+          <div>
+            <label for="postal-code">Postal code</label>
+            <input type="text" id="postal-code" />
+            <p id="postal-code-error">&nbsp;</p>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <label for="email">Email</label>
+            <input type="text" id="email" />
+            <p id="email-error">&nbsp;</p>
+          </div>
+        </div>
+
+        <div class="row-form">
+          <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" />
+            <p id="password-error">&nbsp;</p>
+          </div>
+          <div>
+            <label for="repeat-password">Repeat password</label>
+            <input type="password" id="repeat-password" />
+            <p id="repeat-password-error">&nbsp;</p>
+          </div>
+        </div>
+
+        <button id="submit">Sign up</button>
       </form>
     </fieldset>
   </body>

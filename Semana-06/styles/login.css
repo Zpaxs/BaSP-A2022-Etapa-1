@@ -23,6 +23,12 @@ form {
   height: 90%;
   font-size: 14px;
 }
+.red-background {
+  background-color: indianred;
+}
+.green-background {
+  background-color: lightgreen;
+}
 
 #password-input,
 #email-input {
@@ -54,4 +60,17 @@ form {
   color: #ffffff;
   border: 0px;
   border-radius: 5px;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  main {
+    margin-top: 18%;
+    margin-bottom: 10px;
+  }
+  .form-login {
+    margin: 0;
+  }
+  .table {
+    width: 60%;
+  }
 }

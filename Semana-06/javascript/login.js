@@ -1,5 +1,4 @@
 window.onload = function () {
-  var formLogin = document.getElementById("form-login");
   var emailInput = document.getElementById("email-input");
   var passwordInput = document.getElementById("password-input");
   var loginButton = document.getElementById("form-login-button");
@@ -9,7 +8,7 @@ window.onload = function () {
   });
 
   emailInput.addEventListener("focus", function () {
-    cleanField("email-error");
+    cleanField("email-error", "email-input");
   });
 
   passwordInput.addEventListener("blur", function () {
@@ -17,7 +16,14 @@ window.onload = function () {
   });
 
   passwordInput.addEventListener("focus", function () {
-    cleanField("password-error");
+    cleanField("password-error", "password-input");
+  });
+
+  loginButton.addEventListener("click", function (e) {
+    e.preventDefault();
+    validateEmail();
+    validatePassword();
+    cartelitouKN();
   });
 };
 
@@ -26,9 +32,13 @@ function validateEmail() {
   var errorId = "email-error";
 
   if (emailValue.length === 0) {
-    showErrorMsg("This field can't be empty.", errorId);
+    showErrorMsg("Email can't be empty.", errorId);
+    document.getElementById("email-input").classList.add("red-background");
   } else if (!rightEmail(emailValue)) {
     showErrorMsg("Please enter a valid e-mail address.", errorId);
+    document.getElementById("email-input").classList.add("red-background");
+  } else {
+    document.getElementById("email-input").classList.add("green-background");
   }
 }
 
@@ -37,14 +47,19 @@ function validatePassword() {
   var errorId = "password-error";
 
   if (passwordValue.length === 0) {
-    showErrorMsg("This field can't be empty.", errorId);
+    showErrorMsg("Password can't be empty.", errorId);
+    document.getElementById("password-input").classList.add("red-background");
   } else if (passwordValue.length < 8) {
     showErrorMsg("Password needs to be at least 8 characters length.", errorId);
+    document.getElementById("password-input").classList.add("red-background");
+  } else {
+    document.getElementById("password-input").classList.add("green-background");
   }
 }
 
-function cleanField(field) {
-  document.getElementById(field).innerText = " ";
+function cleanField(errorField, inputField) {
+  document.getElementById(errorField).innerText = " ";
+  document.getElementById(inputField).classList.remove("red-background", "green-background");
 }
 
 function showErrorMsg(text, field) {
@@ -54,4 +69,26 @@ function showErrorMsg(text, field) {
 function rightEmail(value) {
   var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
   return value.match(emailExpression);
+}
+
+function cartelitouKN() {
+  var msg = "";
+  var emailValue = document.getElementById("email-input").value;
+  var passValue = document.getElementById("password-input").value;
+  var errorEmail = document.getElementById("email-error").innerText;
+  var errorPass = document.getElementById("password-error").innerText;
+
+  if (errorEmail.length !== 1) {
+    msg += errorEmail + "\n";
+  } else {
+    msg += "Email: " + emailValue + "\n";
+  }
+
+  if (errorPass.length !== 1) {
+    msg += errorPass;
+  } else {
+    msg += "Password: " + passValue;
+  }
+
+  alert(msg);
 }

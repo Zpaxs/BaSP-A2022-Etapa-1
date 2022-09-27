@@ -39,7 +39,8 @@
   aside {
     position: fixed;
     width: 20%;
-    height: 100%;
+    top: 0%;
+    bottom: 0;
     background-color: #ff0000;
     color: #ffffff;
     font-family: "Roboto";

@@ -1,0 +1,82 @@
+body {
+  font-family: "Abel";
+}
+.row-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+label {
+  display: block;
+}
+.column1,
+.column2 {
+  display: flex;
+  flex-direction: column;
+}
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.sign-up-title {
+  padding: 1% 0;
+  background-color: #ff0000;
+  width: 100%;
+  font-size: 50px;
+  color: #ffffff;
+  text-align: center;
+}
+.form-title {
+  font-size: 32px;
+  text-align: center;
+}
+.form-sign-up {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding: 6%;
+  margin-top: 10%;
+  margin-left: 35%;
+  margin-bottom: 5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div > input {
+  padding: 8%;
+}
+#email {
+  padding: 3%;
+}
+#submit {
+  text-align: center;
+  padding: 3%;
+  width: 50%;
+  font-family: "Roboto";
+  font-size: 14px;
+  background-color: #ff0000;
+  color: #ffffff;
+  border: 0px;
+  border-radius: 5px;
+}
+
+.red-background {
+  background-color: indianred;
+  border: solid 2px #ff0000;
+}
+.green-background {
+  background-color: lightgreen;
+  border: solid 2px green;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .row-form {
+    flex-direction: column;
+  }
+  .form-sign-up {
+    margin-left: 10%;
+    width: 70%;
+  }
+}

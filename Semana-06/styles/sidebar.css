@@ -45,12 +45,14 @@
     font-family: "Roboto";
   }
   .aside-desktop {
+    z-index: 100;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     height: 100%;
   }
   .content-ad {
+    z-index: 100;
     display: flex;
     flex-direction: column;
     align-items: center;

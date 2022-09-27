@@ -24,11 +24,15 @@ I added the corresponding styles to the HTML structure with css.
 
 ### Week-04:
 
-I worked on making the landing page responsive using flexbox and media queries.
+I worked on making the [landing](https://zpaxs.github.io/BaSP-A2022-Etapa-1/Semana-04/) page responsive using flexbox and media queries.
 
 ### Week-05:
 
-Im currently working on exercises of javascript to practice what i've learned.
+I practiced with javascript [exercises](https://zpaxs.github.io/BaSP-A2022-Etapa-1/Semana-05/) to try what i've learned.
+
+### Week-06:
+
+Im currently working on form validations in the [login](https://zpaxs.github.io/BaSP-A2022-Etapa-1/Semana-06/views/login.html) and [sing-up](https://zpaxs.github.io/BaSP-A2022-Etapa-1/Semana-06/views/sign-up.html) with javascript.
 
 ## Setup
 

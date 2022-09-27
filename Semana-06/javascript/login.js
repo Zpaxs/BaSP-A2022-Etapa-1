@@ -23,7 +23,7 @@ window.onload = function () {
     e.preventDefault();
     validateEmail();
     validatePassword();
-    cartelitouKN();
+    alertMsg();
   });
 };
 
@@ -34,7 +34,7 @@ function validateEmail() {
   if (emailValue.length === 0) {
     showErrorMsg("Email can't be empty.", errorId);
     document.getElementById("email-input").classList.add("red-background");
-  } else if (!rightEmail(emailValue)) {
+  } else if (!validEmail(emailValue)) {
     showErrorMsg("Please enter a valid e-mail address.", errorId);
     document.getElementById("email-input").classList.add("red-background");
   } else {
@@ -66,12 +66,12 @@ function showErrorMsg(text, field) {
   document.getElementById(field).innerText = text;
 }
 
-function rightEmail(value) {
+function validEmail(value) {
   var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
   return value.match(emailExpression);
 }
 
-function cartelitouKN() {
+function alertMsg() {
   var msg = "";
   var emailValue = document.getElementById("email-input").value;
   var passValue = document.getElementById("password-input").value;

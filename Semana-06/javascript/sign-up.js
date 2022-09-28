@@ -203,8 +203,8 @@ function validateName() {
   } else if (name.length < 3) {
     showErrorMsg("Name needs to be at least 3 characters length.", errorId);
     document.getElementById("name").classList.add("red-background");
-  } else if (!isNaN(name)) {
-    showErrorMsg("Enter letters only", errorId);
+  } else if (!isString(name)) {
+    showErrorMsg("Name can only contain letters.", errorId);
     document.getElementById("name").classList.add("red-background");
   } else {
     document.getElementById("name").classList.add("green-background");
@@ -221,8 +221,8 @@ function validateLastName() {
   } else if (lastName.length < 3) {
     showErrorMsg("Last name needs to be at least 3 characters length.", errorId);
     document.getElementById("name").classList.add("red-background");
-  } else if (!isNaN(lastName)) {
-    showErrorMsg("Enter letters only", errorId);
+  } else if (!isString(lastName)) {
+    showErrorMsg("Last name can only contain letters.", errorId);
     document.getElementById("last-name").classList.add("red-background");
   } else {
     document.getElementById("last-name").classList.add("green-background");
@@ -236,8 +236,8 @@ function validateDocument() {
   if (documentValue.length === 0) {
     showErrorMsg("Document is required", errorId);
     document.getElementById("document-input").classList.add("red-background");
-  } else if (isNaN(documentValue)) {
-    showErrorMsg("Enter numeric value only", errorId);
+  } else if (!isNumeric(documentValue)) {
+    showErrorMsg("Document can only contain numbers.", errorId);
     document.getElementById("document-input").classList.add("red-background");
   } else if (documentValue.length < 7) {
     showErrorMsg("Document needs to be at least 7 characters length.", errorId);
@@ -252,7 +252,7 @@ function validateDateOfBirth() {
   var errorId = "date-of-birth-error";
 
   if (dateOfBirth.length === 0) {
-    showErrorMsg("The date of birth is required", errorId);
+    showErrorMsg("The date of birth is required.", errorId);
     document.getElementById("date-of-birth").classList.add("red-background");
   } else {
     document.getElementById("date-of-birth").classList.add("green-background");
@@ -267,8 +267,8 @@ function validatePhone() {
     showErrorMsg("Phone is required", errorId);
     document.getElementById("phone").classList.add("red-background");
   }
-  if (isNaN(phone)) {
-    showErrorMsg("Enter numeric value only", errorId);
+  if (!isNumeric(phone)) {
+    showErrorMsg("Phone can only contain numbers.", errorId);
     document.getElementById("phone").classList.add("red-background");
   } else if (phone.length !== 10) {
     showErrorMsg("Phone needs to be 10 characters length.", errorId);
@@ -288,6 +288,15 @@ function validateAddress() {
   } else if (address.length < 5) {
     showErrorMsg("Address needs to be at least 5 characters length.", errorId);
     document.getElementById("address").classList.add("red-background");
+  } else if (!isAlphanumeric(address)) {
+    showErrorMsg("Address needs to contain letters and numbers.", errorId);
+    document.getElementById("address").classList.add("red-background");
+  } else if (!hasSpace(address)) {
+    showErrorMsg("Address needs to have a space in the middle.", errorId);
+    document.getElementById("address").classList.add("red-background");
+  } else if (!containNumbersAndLetters(address)) {
+    showErrorMsg("Address needs to contain letters and numbers.", errorId);
+    document.getElementById("address").classList.add("red-background");
   } else {
     document.getElementById("address").classList.add("green-background");
   }
@@ -303,6 +312,9 @@ function validateLocation() {
   } else if (location.length < 3) {
     showErrorMsg("Location needs to be at least 3 characters length.", errorId);
     document.getElementById("location").classList.add("red-background");
+  } else if (!isAlphanumeric(location)) {
+    showErrorMsg("Location can only contain letters or numbers.", errorId);
+    document.getElementById("location").classList.add("red-background");
   } else {
     document.getElementById("location").classList.add("green-background");
   }
@@ -316,8 +328,8 @@ function validatePostalCode() {
     showErrorMsg("The postal code is required", errorId);
     document.getElementById("postal-code").classList.add("red-background");
   }
-  if (isNaN(postalCode)) {
-    showErrorMsg("Enter numeric value only", errorId);
+  if (!isNumeric(postalCode)) {
+    showErrorMsg("Postal code can only contain numbers.", errorId);
     document.getElementById("postal-code").classList.add("red-background");
   } else if (postalCode.length < 4 || postalCode.length > 5) {
     showErrorMsg("Postal code needs to be 4 or 5 characters length.", errorId);
@@ -351,6 +363,9 @@ function validatePassword() {
     document.getElementById("password").classList.add("red-background");
   } else if (password.length < 8) {
     showErrorMsg("Password needs to be at least 8 characters length.", errorId);
+    document.getElementById("password").classList.add("red-background");
+  } else if (!isAlphanumeric(password)) {
+    showErrorMsg("Password can only contain letters or numbers.", errorId);
     document.getElementById("password").classList.add("red-background");
   } else {
     document.getElementById("password").classList.add("green-background");
@@ -386,4 +401,52 @@ function cleanField(errorField, inputField) {
 function validEmail(value) {
   var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
   return value.match(emailExpression);
+}
+
+function isString(value) {
+  var alphabet = " abcdefghijklmnopqrstuvwxyz";
+
+  return validateString(value, alphabet);
+}
+
+function isNumeric(value) {
+  var numbers = "0123456789";
+
+  return validateString(value, numbers);
+}
+
+function isAlphanumeric(value) {
+  var alphanumeric = " abcdefghijklmnopqrstuvwxyz0123456789";
+
+  return validateString(value, alphanumeric);
+}
+
+function validateString(string, validValues) {
+  var length = string.length;
+  for (var i = 0; i < length; i++) {
+    var char = string.charAt(i).toLowerCase();
+    if (!validValues.includes(char)) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+function hasSpace(value) {
+  return value.indexOf(" ") >= 1;
+}
+
+function containNumbersAndLetters(value) {
+  var length = value.length;
+  var containNumber = false;
+  var containLetter = false;
+
+  for (var i = 0; i < length; i++) {
+    var char = value.charAt(i);
+    if (!containNumber) containNumber = isNumeric(char);
+    if (!containLetter) containLetter = isString(char);
+  }
+
+  return containLetter && containNumber;
 }

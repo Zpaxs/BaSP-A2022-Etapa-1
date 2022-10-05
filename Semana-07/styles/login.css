@@ -1,0 +1,86 @@
+body {
+  font-family: "Abel";
+}
+
+.container-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 30%;
+  margin-bottom: 30%;
+}
+.row-form {
+  margin: 5%;
+}
+
+.login-title {
+  padding: 1% 0;
+  background-color: #ff0000;
+  width: 100%;
+  font-size: 50px;
+  color: #ffffff;
+  text-align: center;
+}
+form {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  margin-left: 10%;
+  height: 90%;
+  font-size: 14px;
+  padding: 5%;
+}
+.red-background {
+  background-color: indianred;
+  border-radius: 5px;
+}
+.green-background {
+  background-color: lightgreen;
+  border-radius: 5px;
+}
+
+#password-input,
+#email-input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid red;
+}
+#email-input {
+  background-image: url(../assets/Mail.png);
+  background-repeat: no-repeat;
+}
+#password-input {
+  background-image: url(../assets/Lock.png);
+  background-repeat: no-repeat;
+}
+.form-title {
+  font-size: 32px;
+}
+#form-login-button {
+  padding: 25%;
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 14px;
+  background-color: #ff0000;
+  color: #ffffff;
+  border: 0px;
+  border-radius: 5px;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  main {
+    margin-top: 18%;
+    margin-bottom: 10px;
+  }
+  .form-login {
+    margin: 0;
+  }
+  .container-form {
+    width: 60%;
+  }
+}

@@ -19,14 +19,15 @@ window.onload = function () {
     cleanField("password-error", "password-input");
   });
 
-  loginButton.addEventListener("click", function (e) {
-    e.preventDefault();
-    validateEmail();
-    validatePassword();
-    alertMsg();
-  });
+  emailInput.value = localStorage.getItem('email-input');
+  passwordInput.value = localStorage.getItem('password-input');
+  loginButton.addEventListener("click", login);
 };
 
+function validEmail(value) {
+  var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+  return value.match(emailExpression);
+}
 function validateEmail() {
   var emailValue = document.getElementById("email-input").value;
   var errorId = "email-error";
@@ -34,11 +35,14 @@ function validateEmail() {
   if (emailValue.length === 0) {
     showErrorMsg("Email can't be empty.", errorId);
     document.getElementById("email-input").classList.add("red-background");
+    return false;
   } else if (!validEmail(emailValue)) {
     showErrorMsg("Please enter a valid e-mail address.", errorId);
     document.getElementById("email-input").classList.add("red-background");
+    return false;
   } else {
     document.getElementById("email-input").classList.add("green-background");
+    return true;
   }
 }
 
@@ -49,11 +53,14 @@ function validatePassword() {
   if (passwordValue.length === 0) {
     showErrorMsg("Password can't be empty.", errorId);
     document.getElementById("password-input").classList.add("red-background");
+    return false;
   } else if (passwordValue.length < 8) {
     showErrorMsg("Password needs to be at least 8 characters length.", errorId);
     document.getElementById("password-input").classList.add("red-background");
+    return false;
   } else {
     document.getElementById("password-input").classList.add("green-background");
+    return true;
   }
 }
 
@@ -66,29 +73,37 @@ function showErrorMsg(text, field) {
   document.getElementById(field).innerText = text;
 }
 
-function validEmail(value) {
-  var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-  return value.match(emailExpression);
-}
 
-function alertMsg() {
-  var msg = "";
-  var emailValue = document.getElementById("email-input").value;
-  var passValue = document.getElementById("password-input").value;
-  var errorEmail = document.getElementById("email-error").innerText;
-  var errorPass = document.getElementById("password-error").innerText;
-
-  if (errorEmail.length !== 1) {
-    msg += errorEmail + "\n";
-  } else {
-    msg += "Email: " + emailValue + "\n";
+function login(e) {
+  if (!validateEmail()) {
+    alert('Incorrect email. Please try again');
   }
-
-  if (errorPass.length !== 1) {
-    msg += errorPass;
-  } else {
-    msg += "Password: " + passValue;
+  else if (!validatePassword()) {
+    alert('Incorrect password. Please try again');
   }
+  else {
+    e.preventDefault();
+    var emailAlert = document.getElementById('email-input').value;
+    var passwordAlert = document.getElementById('password-input').value;
+    alert('Email: ' + emailAlert + ' Pass: ' + passwordAlert);
 
-  alert(msg);
+    var urlWithQP = 'https://basp-m2022-api-rest-server.herokuapp.com/login?email=' + emailAlert + '&password=' + passwordAlert;
+
+    fetch(urlWithQP)
+      .then(function (res) {
+        return res.json();
+      })
+      .then(function (data) {
+        console.log(data)
+        alert(data.msg);
+        if (!data.success) {
+          throw new Error('There was an error with the request');
+        }
+        emailInput.value = localStorage.setItem('email-input');
+        passwordInput.value = localStorage.setItem('password-input');
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+  }
 }
